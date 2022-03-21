@@ -21,9 +21,10 @@
 				<h2 class="titulos">Confirme seu pedido:</h2>
 					<div class="opcoes">
 						<label for="react">React</label>
+						<label onsubmit="react()" style="display:none">0 </label>
 					</div>	
 					<div class="opcoes">
-						<label for="react">React</label>
+						<label for="vue">Vue</label>
 					</div>	
 					<div class="opcoes">
 						<label for="angular">Angular</label>
@@ -31,32 +32,30 @@
 				<h2 class="titulos">Qual a forma de pagamento?</h2>
 					<div class="grupo-botao">
 						<div class="opcoes">
-							<input class="cursor" type="checkbox" id="cartao" name="cartao">
+							<input class="cursor" type="checkbox" id="cartao" name="check" onclick="myFunction(), onlyOne(this)">
 							<label for="cartao">Cartão de Crédito</label>
-						</div>
-						<div class="opcoes">
-							<input class="cursor" type="checkbox" id="pix" name="pix">
+
+							<input class="cursor" type="checkbox" id="pix" name="check" onclick="myFunction(), onlyOne(this)">
 							<label for="pix">Pix</label>
+
 						</div>
 					</div>
 				<h2 class="titulos">Dados</h2>
 					<div class="area-texto">
 						<div class="form-group">
-						  <label for="nome">Nome</label>
-						  <input class="textodados" type="text" name="nome" id="nome" placeholder="Seu nome aqui">
+						  <label for="nome" style="display:none" id="nomePessoa">Nome</label>
+						  <input class="textodados" style="display:none" type="text" name="nome" id="nome" placeholder="Seu nome aqui">
 						</div>
 						<div class="form-group">
-							<label for="nome">Número do cartão</label>
-							<input class="textodados" type="text" name="Cartão" id="Cartão" placeholder="Seu Cartão aqui">
+							<label style="display:none" id ="numeroCart">Número do cartão</label>
+							<input style="display:none" class="textodados" type="text" name="nomeCartao" id="nomeCartao" placeholder="Seu Cartão aqui">
 						  </div>
-
-
-
 					</div>
 			</div>
 		</main>
 		<footer class="rodape">
-			<button class="enviar"><a class="enviar-texto" href="index.html">Voltar</a></button>
+			<button class="enviar"><a class="enviar-texto" href="checkout.html">Confirmar</a></button>
+			<button class="voltar"><a class="enviar-texto" href="index.html">Voltar</a></button>
 		</footer>
 	</body>
 </html>
